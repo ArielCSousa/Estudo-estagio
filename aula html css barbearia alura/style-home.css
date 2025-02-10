@@ -1,0 +1,64 @@
+
+
+
+/* Quando referenciamos o ID precisa utilizar # antes */
+#banner {
+    width: 100%;
+
+}
+
+.principal {
+    background-color: #CCCCCC;
+    padding: 30px;
+}
+
+.titulo-principal {
+    padding-left: 20px;
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+
+/* aplicando o estilo em uma tag específica, ou seja, toda tag p terá essas propriedade */
+p {
+
+    text-align: center;
+}
+
+
+#missao {
+    font-size: 20px;
+}
+
+
+/*Explorando a hierarquia das tag, efeito cascata com as tags, conseguindo editar tags em situações específicas*/
+em strong {
+    color: #FF0000;
+}
+
+/* Quando referenciamos classes precisa utilizar o ponto . primeiro */
+.itens {
+    font-style: italic;
+}
+
+.beneficios{
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    display:inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagembeneficios {
+    width: 50%;
+}
