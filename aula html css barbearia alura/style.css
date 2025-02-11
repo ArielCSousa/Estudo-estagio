@@ -99,7 +99,7 @@ footer{
 
 
 form {
-    margin: 40px 0;
+    margin: 40px;
 }
 
 form label, form legend {
@@ -138,7 +138,7 @@ form label, form legend {
 }
 
 table {
-    margin: 20px 0 40px;
+    margin: 20px 40px;
 }
 
 thead {
@@ -255,7 +255,39 @@ muda especificamente esse item entre parenteses
 }
 
 @media screen and (max-width: 480px){
-    body{
-        background: red;
-    }
+   .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+    width: auto;
+   }
+
+   h1 {
+    text-align: center;
+   }
+
+   nav {
+    position: static;
+   }
+
+   .lista-beneficios, .imagem-beneficios {
+    width: 100%;
+   }
+
+   .enviar{
+    width: auto;
+    padding: 15px 34px;
+    margin-left: 20px;
+   }
+
+   .produtos {
+    width: auto;
+    padding: 7%;
+   }
+
+   .produtos li {
+    display: table-caption;
+    width: auto;
+    margin: 1.5% 1.5%;
+    padding: 50px 40px;
+    box-sizing: border-box; /*Com essa propriedade o WIDTH escolhido acima de 30% fica como definitivo e não quebra a exibição */
+   }
+
 }
