@@ -1,0 +1,4 @@
+/* colocando espaçamento interno do texto com o quadradinho da receita */
+.receita__conteudo {
+    padding: 1rem;
+}

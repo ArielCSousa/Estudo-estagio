@@ -1,0 +1,9 @@
+/* Aqui a gente coloca aquele tom conza mais escuro de fundo
+na sessão de receitas, coloca o flex wrap para que ela fiquem responsivas
+e fiquem uma embaixo da outra se o site ficar em uma janela muito estreia */
+.receitas{
+    background: #e5e5e5;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 0 5rem;
+}

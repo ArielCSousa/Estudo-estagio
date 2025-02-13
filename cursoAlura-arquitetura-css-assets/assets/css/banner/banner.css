@@ -1,0 +1,7 @@
+/* Alinha o título principal centralizado 
+com relação ao banner e não a pagina toda.
+ o position:relative deixa os filhos do banner
+ sejam posicionados relativamente ao banner.*/
+.banner {
+    position: relative;
+}

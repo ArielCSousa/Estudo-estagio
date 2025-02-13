@@ -1,0 +1,7 @@
+.banner__imagem {
+    height: auto; /*ajustando a altura do banner desconsidrando o cabeçalho */
+    /*calc(100vh - 72px); Esse é p height que pedia no curso mas ele
+    quebrava a imagem em telas menores, o que deixava feio
+    com o auto ele fica responsivo e mais agradável*/
+    width: 100%;
+}    

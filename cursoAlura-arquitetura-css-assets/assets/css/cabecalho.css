@@ -1,0 +1,11 @@
+/* fazendo os itens do header se alinharem corretamente 
+e colocando a cor de fundo no header 
+e colocando espaçamento entre os itens com padding */
+.cabecalho {
+    align-items: center;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

@@ -1,0 +1,5 @@
+/* Deixando o header flexivel para 
+alterações na posição dos itens */
+.menu__lista {
+    display: flex;
+}
