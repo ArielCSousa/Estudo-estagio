@@ -1,5 +1,5 @@
 /* No curso pedia widht: 200px; mas com o 100% a imagem fica mais responsiva
 e fica mais agradável para telas maiores e menores pois se ajusta ao espaço que tem! */
 .receita__imagem {
-    width: 100%;
+    height: auto;
 }

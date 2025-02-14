@@ -1,0 +1,27 @@
+/* fazendo os itens do header se alinharem corretamente 
+e colocando a cor de fundo no header 
+e colocando espaçamento entre os itens com padding */
+.cabecalho {
+    align-items: center;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+/* Quando a tela for maior que 0 aplicará esse estilo */
+@media screen and (min-width: 0) /*tamanho minumo da largura é 0*/ {
+    .cabecalho{
+        padding: 0 1 rem;
+        justify-content: center;
+    }
+}
+    /* Quando a tela for maior que 768px ele aplica essa config */
+@media screen and (min-width: 768px){
+    .cabecalho{
+        padding: 0 5 rem;
+        justify-content: space-between;
+    }
+}

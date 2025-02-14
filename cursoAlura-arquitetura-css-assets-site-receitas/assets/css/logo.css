@@ -1,0 +1,15 @@
+
+
+/* Esconde o logo da página quando a tela for maior que zero e menor que 768px */
+@media screen and (min-width: 0) {
+    .logo{
+        display: none;
+    }
+}
+
+/* Exibe a logo quando for maior que 768px de tela */
+@media screen and (min-width: 768px) {
+    .logo{
+        display: block;
+    }
+}

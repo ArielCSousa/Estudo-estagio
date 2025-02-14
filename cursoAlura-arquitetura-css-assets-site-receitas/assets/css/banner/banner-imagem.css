@@ -1,0 +1,27 @@
+.banner__imagem {
+    /* height: auto; ajustando a altura do banner desconsidrando o cabeçalho */
+    /*calc(100vh - 72px); Esse é p height que pedia no curso mas ele
+    quebrava a imagem em telas menores, o que deixava feio
+    com o auto ele fica responsivo e mais agradável*/
+
+    background: url(../../img/banner.jpg) no-repeat center / cover; /*Atalho para edição do background em uma linha*/
+    /* background-image: url('../../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    height: calc(100vh - 72px);
+    width: 100%;
+}    
+
+@media screen and (min-width: 0) {
+    .banner__imagem{
+        height: calc(100vh - 51px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner__imagem {
+        height: calc(100vh - 72px); /*FOI PEDIDO ESSE NO CURSO MAS A IMAGEM FICAVA DISTORCIDA
+        /* height: auto; */
+    }
+}
