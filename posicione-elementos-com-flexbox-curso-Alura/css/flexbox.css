@@ -1,0 +1,55 @@
+.cabecalhoPrincipal .container{
+  display: flex;
+  align-items: center; /*Alinhando os itens ao centro do container verticalmente*/
+  justify-content: space-between; /* colocando espaço ENTRE os itens, um em cada extremidade do container horizontalmente*/
+}
+
+.cabecalhoPrincipal-nav {
+  display: flex; /*Deixou o menu de navegação no cabeçalho um ao lado do outro*/
+}
+
+.rodapePrincipal-patrocinadores .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 75%; /*Aumentando a largura para conseguir alinhar os itens do rodapé*/
+}
+
+.rodapePrincipal-contatoForm{
+  width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+  display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  flex-flow: column wrap; /*substitui as duas de cima que estão comentadas em uma única linha*/
+  height: 260px; /*No curso pediu 250px mas quebrou na minha resolução atual, então adaptei*/
+}
+
+.conteudoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+  width: 23%;
+  margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n){
+  margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+  margin-left: 0;
+}
