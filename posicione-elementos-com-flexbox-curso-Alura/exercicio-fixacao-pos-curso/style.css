@@ -1,0 +1,13 @@
+.flexContainer {
+    display: flex;
+    background-color: black;
+    height: 600px;
+  }
+  .flexItem {
+    width: 200px;
+    background-color: aqua;
+  }
+
+  .flexItem:first-child {
+    flex-shrink: 3;
+  }
