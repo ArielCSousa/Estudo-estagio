@@ -16,7 +16,7 @@
     --planos-cartao-ultra: #B04CD9;
     --planos-cartao-mega: #E33B3B;
 
-    --monserrat: 'Montserrat', sans serif;
+    --montserrat: 'Montserrat', sans serif;
 }
 
 /*SINTAXE PARA VARIÁVEIS: --nome-da-variavel: valor; */
@@ -41,4 +41,18 @@ body {
     padding: 1rem 2rem;
     border: 1px solid var(--branco);
     border-radius: 5px;
+}
+
+/* RESPONSIVO ------ DESKTOP ----- */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    } /*Resumindo: O que esse código faz é calcular
+     quanto de espaço sobra nas laterais do elemento e 
+     dividir igualmente entre a margem esquerda e 
+     direita, de forma que o conteúdo fique centralizado 
+     na tela.*/
+
+     
 }
