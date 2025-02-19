@@ -1,0 +1,30 @@
+.destaques {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; /*dividindo a coluna em quatro*/
+    grid-template-rows: 33.33% 33.33% 33.33%; /*dividindo as linhas das colunas em 3 partes*/
+    height: calc(100vh - 50px); /*dessa forma, os 50px representa o tamanho que demos
+    para o cabeçalho, fazendo assim com que a sessão destaques
+    preencha toda a altura da página MENOS o cabeçalho*/
+}
+
+.destaques__principal {
+    background-image: url(../img/fortnite.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.destaques__secundario:nth-child(2) { /*2 representa que o pubg é o gilho número 2 e posiciona só ele*/
+    background-image: url(../img/pubg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
