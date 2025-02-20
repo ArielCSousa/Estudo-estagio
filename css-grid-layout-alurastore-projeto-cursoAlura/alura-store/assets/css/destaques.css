@@ -1,0 +1,99 @@
+/* Daixando o titulo de cada imagem na parte de baixo de cada uma,
+com o texto centralizado */
+.caixa {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.destaques {
+    display: grid;
+    grid-template-columns: 25% 25% 25% calc(25% - .6rem); 
+     /* dividindo a coluna em quatro, e tirando .6rem da ultima coluna para o site nao ficar largo demais no browser */
+    grid-template-rows: 33.33% 33.33% 33.33%; /*dividindo as linhas das colunas em 3 partes*/
+    height: calc(100vh - 50px); /*dessa forma, os 50px representa o tamanho que demos
+    para o cabeçalho, fazendo assim com que a sessão destaques
+    preencha toda a altura da página MENOS o cabeçalho*/
+    grid-gap: .2rem; /*COLOCANDO ESPAÇAMENTO ENTRE OS ITENS E IMAGENS DO GRID*/
+}
+
+/* deixando o fundo dos titulos de cada imagem com
+sombreado e alinhando o texto e deixando a fonte branca */
+.destaques__titulo {
+    background: rgba(0, 0, 0, .5);
+    color: #FDFDFD;
+    padding: .6rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* destacando a imagem do fortnite em mais colunas */
+.destaques__principal {
+    background: url('../img/fortnite.jpg') center / cover no-repeat;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-row: 1 / 3;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+}
+
+/* deixando o pubg na lateral superior direita do grid */
+.destaques__secundario:nth-child(2) { /*2 representa que o pubg é o gilho número 2 e posiciona só ele*/
+    background: url('../img/pubg.jpg') center / cover no-repeat;
+    /* grid-column: 4 / 4;
+    grid-row: 1 / 1; */
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url(../img/slack.png) center / cover no-repeat;
+    /* grid-column: 4 / 4;
+    grid-row: 2 / 2; */
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url(../img/whatsapp.png) center / cover no-repeat;
+    /* grid-column: 4 / 4;
+    grid-row: 3 / 3; */
+}
+
+.destaques__secundario:nth-child(5){
+    background: url(../img/cs-go.jpg) center / cover no-repeat;
+    /* grid-column: 3 / 3;
+    grid-row: 3 / 3; */
+}
+
+
+/* colocando no grid os quatro itens do menu abaixo da imagem fortnite */
+.destaques__categorias{
+    
+    grid-row: 3 / 3;
+}
+
+/* alinhando os itens do menu */
+.destaques__categorias___lista {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* personalizando o background dos itens do menu abaixo do fortnite */
+.destaques__categorias___item {
+    display: flex;
+    align-items: center;
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333333;
+    padding: 1rem;
+    width: 50%;
+}
+
+/* deixando a fonte do menu que está abaixo do fortnite
+com a fonte igual a do item pai */
+.destaques__categorias___link{
+    color: inherit;
+}

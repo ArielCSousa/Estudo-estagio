@@ -7,17 +7,28 @@
     "conteudo"
     "rodape";
     grid-template-columns: auto;
-    grid-template-rows: 58px 100vh auto;
+    grid-template-rows: 58px auto auto; /*esse auto no meio 
+    é para o rodapé ficar ao final da pagina*/
 }
 
 .cabecalho {
     grid-area: "cabecalho";
+
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
 }
  
 .conteudo {
     grid-area: "conteudo";
+    padding: 0 2rem;
 }
 
 .rodape {
     grid-area: "rodape";
+    background: #fdfdfd;
+    color: #333333;
+    font-size: .8rem;
+    padding: 1rem;
+    text-align: center;
 }
