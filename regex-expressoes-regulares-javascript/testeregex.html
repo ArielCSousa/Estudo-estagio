@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    É importante notar que o HTML5 procurou facilitar ainda mais a vida dos
+     desenvolvedores adicionando o suporte a validações com expressões regulares,
+      sem a necessidade de escrevermos código JavaScript. -->
+    <form>
+        <input pattern="[0-9]*">
+        <input type="submit" value="Enviar dados">
+    </form>
+
+
+
+
+
+    <!-- APRENDENDO A USAR REGEX NO JAVASCRIPT -->
+    <script>
+        // var alvo = '11a22b33c';
+        //usar dessa forma quando REGEX FOR FIXA
+        // var exp  = /(\d\d)(\w)/g; //esse 'g' significa globa
+        // console.log(exp.test(alvo));
+        // var resultado = null;
+        // while(resultado = exp.exec(alvo)){
+        // console.log(resultado);
+        // console.log(exp.lastIndex);
+        // }
+
+        //EXEMPLO 01---------------------------------------------------------
+        var anoMesDia = '2007-12-31'; //minha string
+        var exp = /-/g //encontrando todos os hífens
+        anoMesDia = anoMesDia.replace(exp, '/'); //trocando os hífens por barras
+        console.log(anoMesDia); //imprimindo no console '2007/12/31'
+
+
+        //EXEMPLO 02---------------------------------------------------------
+
+        // FORMA ERRADA
+        // var arquivo = '100,200-150,200;20';
+        // var valores = arquivo.split(',');
+        // console.log(valores)
+
+        //FORMA CORRETA
+        // var arquivo = '100,200-150,200;20';
+        // var exp = /[,;-]/;
+        // var valores = arquivo.split(exp);
+        // console.log(valores);
+        //DESSA FORMA TODOS OS VALORES FICAM SEPARADOS POR VÍRGULA E DENTRO DE UM ARRAY
+
+
+        //EXEMPLO 03---------------------------------------------------------
+        //Mais um método de string que aceita receber uma expressão regular! 
+        var codigos = 'A121B12112C12212F12G01';
+        //expressão regular que podemos usar para selecionar quem é código
+        var exp = /[A-Za-z]\d+/g
+
+        var codigosExtraidos = codigos.match(exp);
+        console.log(codigosExtraidos)
+
+
+
+    </script>
+
+</body>
+</html>
