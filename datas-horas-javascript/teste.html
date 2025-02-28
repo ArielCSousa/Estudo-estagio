@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main >
+                <center>
+                <div class="cordefundo">
+                    aaaaaaaaa
+                </div>
+                </center>
+    </main>
+</body>
+</html>
+
+<script>
+
+    //******************* ENCONTRANDO AS HORAS
+    const horas = new Date();
+    console.log(horas , 'APENAS O NEW DATE CRU');
+
+    console.log( horas.getUTCHours(), ' GET UTC HOURS TRAZ HORÁRIO UNIVERSAL');
+    //ESSETRAZ A HORA EM UTC (TEMPO UNIVERSAL COORDENADO) E NÃO O HORÁRIO LOCAL!
+
+    console.log( horas.getHours() , 'get hours para trazer o horário local')
+
+    //******************* UTILIZANDO HORAS PARA
+                        //MUDAR COR DE FUNDO DO SITE - DEIXAR AZUL A PARTIR DAS 16:00H
+
+    const conteudo = document.querySelector(".cordefundo");
+    conteudo.style.background = "#fed02e";
+
+
+    const now = new Date;
+    const tempo = now.getHours(); //>>>pega o horário local e guarda na constante para utilizar no if abaixo
+    // const tempo = 17; // se for 17 horas ficará azul
+
+    if( tempo < 16 ) {
+
+        const conteudo = document.querySelector(".cordefundo");
+
+        conteudo.style.background = "#fed02e";
+
+    } else {
+
+        const conteudo = document.querySelector(".cordefundo");
+
+        conteudo.style.background = "#1000ff";
+    }
+
+// ************ PODEMOS PASSAR O VALOR DA DATA EM MILISEGUNDOS, CADA 86.400,000 MILISEGUNDOS CORRESPONDE A 1 DIA(DOCUMENTAÇÃO DO MOZILA)
+    const horasMilisegundos = new Date(5000000000000);
+    console.log( horasMilisegundos, 'Passei as horas em milisegundos' );
+
+
+// ************PASSANDO DIA, MÊS E ANO COMO PARÂMETRO, NESSA NOTAÇÃO O MÊS DE JANEIRO É 0
+
+    const horasDiaMesAno = new Date(2025,1,28);
+    console.log(horasDiaMesAno, 'Com dia, mes e ano como parametros');
+    
+
+// ************* PASSANDO PARÂMETROS DE STRING
+    const horasString = new Date("2025/01/28");
+    console.log( horasString , 'Passando parâmetros de string')
+
+</script>
