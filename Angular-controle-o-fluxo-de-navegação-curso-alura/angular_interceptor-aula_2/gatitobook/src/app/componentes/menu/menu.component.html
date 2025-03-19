@@ -1,0 +1,17 @@
+<!-- ngclass funciona como um if/else -->
+<!-- ngclass recebe um objeto nas condicionais, funciona como um switch dentro do template -->
+<div [ngClass]="{'active-menu': mostraMenu}"> 
+    <div class="menu-bar">
+        <i class="fa fa-window-close"
+            (click)="abreMenu()"
+            (keyup.space)="abreMenu()"
+        >
+        </i>
+        <!-- ESSE ng content precisa de seletor se tiver mais de um, como estamos usando só um não usaremos -->
+        <ng-content ></ng-content>
+    </div>
+
+    <div class="overlay" (click)="abreMenu()">
+
+    </div>
+</div>
