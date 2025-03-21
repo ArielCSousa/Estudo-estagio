@@ -1,0 +1,28 @@
+<!-- Vamos montar então uma tabela para melhorar a exibição do nosso histórico
+ de transferencias -->
+<table class="tabela">
+  <!-- cabeçalho da tabela -->
+  <thead class="tabela__cabecalho">
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Destino</th>
+  </thead>
+
+  <!-- corpo da tabela -->
+  <tbody>
+    <!-- cada TR é uma linha da nossa tabela -->
+    <tr *ngFor="let transferencia of transferencias">
+      <td>{{ transferencia.data | date: "short"}}</td>
+      <td>{{ transferencia.valor | currency }}</td>
+      <td>{{ transferencia.destino }}</td>
+    </tr>
+    <!-- fim de cada linha -->
+  </tbody>
+</table>
+
+<!-- ESSA ERA A EXIBIÇÃO DO INÍCIO
+<div *ngFor="let transferencia of transferencias">
+  <p>Data: {{ transferencia?.data }}</p>
+  <p>Valor: {{ transferencia?.valor }}</p>
+  <p>Destino: {{ transferencia?.destino }}</p>
+</div> -->
