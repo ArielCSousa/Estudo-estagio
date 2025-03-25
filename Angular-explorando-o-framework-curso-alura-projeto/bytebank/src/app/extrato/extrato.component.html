@@ -1,24 +1,32 @@
-<!-- Vamos montar então uma tabela para melhorar a exibição do nosso histórico
+<section class="container">
+  <h2 class="titulo">Tranferências</h2>
+  <!-- Vamos montar então uma tabela para melhorar a exibição do nosso histórico
  de transferencias -->
-<table class="tabela">
-  <!-- cabeçalho da tabela -->
-  <thead class="tabela__cabecalho">
-    <th>Data</th>
-    <th>Valor</th>
-    <th>Destino</th>
-  </thead>
+  <table class="tabela">
+    <!-- cabeçalho da tabela -->
+    <thead class="tabela__cabecalho">
+      <th class="tabela__cabecalho__conteudo">Data</th>
+      <th class="tabela__cabecalho__conteudo">Valor</th>
+      <th class="tabela__cabecalho__conteudo">Destino</th>
+    </thead>
 
-  <!-- corpo da tabela -->
-  <tbody>
-    <!-- cada TR é uma linha da nossa tabela -->
-    <tr *ngFor="let transferencia of transferencias">
-      <td>{{ transferencia.data | date: "short"}}</td>
-      <td>{{ transferencia.valor | currency }}</td>
-      <td>{{ transferencia.destino }}</td>
-    </tr>
-    <!-- fim de cada linha -->
-  </tbody>
-</table>
+    <!-- corpo da tabela -->
+    <tbody *ngIf="transferencias?.length > 0; else listaVazia">
+      <!-- cada TR é uma linha da nossa tabela -->
+      <tr class="tabela__linha" *ngFor="let transferencia of transferencias">
+        <td class="tabela__conteudo">
+          {{ transferencia.data | date : "short" }}
+        </td>
+        <td class="tabela__conteudo">{{ transferencia.valor | currency }}</td>
+        <td class="tabela__conteudo">{{ transferencia.destino }}</td>
+      </tr>
+      <!-- fim de cada linha -->
+    </tbody>
+  </table>
+  <ng-template #listaVazia>
+    <p>Nenhuma transferência cadastrada</p>
+  </ng-template>
+</section>
 
 <!-- ESSA ERA A EXIBIÇÃO DO INÍCIO
 <div *ngFor="let transferencia of transferencias">
