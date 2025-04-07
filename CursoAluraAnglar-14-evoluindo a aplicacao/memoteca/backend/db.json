@@ -1,0 +1,74 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo": "fome e sono",
+      "autoria": "adivinha",
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
+      "id": 2,
+      "conteudo": "Estudando Angular",
+      "autoria": "Dev Alura",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "id": 3,
+      "conteudo": "Angular é o melhor",
+      "autoria": "Confia",
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "conteudo": "Pensamento teste",
+      "autoria": "dev Angular",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 4
+    },
+    {
+      "conteudo": "pensamento 1",
+      "autoria": "adicionando mais 1",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 5
+    },
+    {
+      "conteudo": "OUTRO...",
+      "autoria": "TA QUASE!",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 7
+    },
+    {
+      "conteudo": "CADê?",
+      "autoria": "ESTÁ AQUI!",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 8
+    },
+    {
+      "conteudo": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "autoria": "aaaaaaaaaaaaaaaaaaaaaaaab",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 9
+    },
+    {
+      "conteudo": "oioioioi",
+      "autoria": "oioioioioioioioioio",
+      "modelo": "modelo1",
+      "favorito": true,
+      "id": 10
+    },
+    {
+      "conteudo": "nicollas está tentando configurar o terminal de consulta da gertec",
+      "autoria": "nicollas",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 11
+    }
+  ]
+}
