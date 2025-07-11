@@ -1,0 +1,118 @@
+para instalar o composer:
+
+- acessar a site: https://getcomposer.org/
+- fazer download o executavel e executar
+- conferir se foi intalado com o comando: >composer --version
+
+com a pasta de alocação do projeto já criada, vamos criar o arquivo json do composer com o comando:  >composer init 
+
+
+==============================================================
+Use as seguinte informações:
+
+Package Name: seu-nickname/buscador-cursos
+Description: Projeto que busca cursos no site da alura
+Author: Seu Nome
+Minimum Stability: deixa em branco
+Package Type: library
+License: deixa em branco
+==============================================================
+E nas duas perguntas sobre as dependências digite >no. Por fim, confirma a geração do arquivo composer.json:
+
+            {
+                "name": "cviniciussdias/buscador-cursos",
+                "description": "Projeto que busca os cursos no site da Alura",
+                "type": "library",
+                "authors": [
+                    {
+                        "name": "Vinicius Dias",
+                        "email": "carlosv775@gmail.com"
+                    }
+                ],
+                "require": {}
+            }
+
+==========================================================================
+repositório principal do composer para buscar pacotes: https://packagist.org/
+
+para esse projeto vamos utilizar dois pacote:
+- https://packagist.org/packages/guzzlehttp/guzzle - >composer require guzzlehttp/guzzle
+
+- https://packagist.org/packages/symfony/dom-crawler - >composer require symfony/dom-crawler
+
+==========================================================================
+aula sobre alteração e autoload no composer.json
+
+https://cursos.alura.com.br/course/php-composer/task/56331
+
+comando após alteração do arquivo .json: -> composer dumpautoloader
+
+==========================================================================
+INSTALAÇÃO DO CODESNIFFER
+    sobre o codesniffer -> Verifica e corrige formatação de código (PSR-12, etc), seus comandos principais são:     > phpcs /   > phpcbf 
+    (exemplo de uso: 
+                > vendor/bin/phpcs --standard=PSR12 src/  (analisa o código e mostra erros)
+                ou
+                > vendor/bin/phpcbf --standard=PSR12 src/  (tenta corrigir automaticamente os erros de formatação encontrados)
+    )
+
+ comando:  
+            > composer require --dev squizlabs/php_codesniffer
+
+comando para analisar meu código dentro da pasta src:
+            > vendor\bin\phpcs --standard=PSR12 src\
+
+comando para corrigir os erros encontrados com o caminho da pasta:
+            > vendor\bin\phpcbf --standard=PSR12 src\Buscador.php
+
+Poderia ser automatizado no composer.json da seguinte forma:
+            - adicionar isso no composer.json:
+                    "scripts": {
+                        "lint": "phpcs --standard=PSR12 src/",
+                        "fix": "phpcbf --standard=PSR12 src/"
+                    }
+            - ai só vai precisar rodar os seguintes comando:
+                  > composer lint   (# para verificar)
+                  > composer fix    (# para corrigir)     
+
+==========================================================================
+
+INSTALAÇÃO PHAN 
+
+    sobre o phan: Analisa código estaticamente para detectar erros reais de execução (como variáveis indefinidas, tipos errados, etc), seus comando principais são:     
+                    > phan  (exemplo de uso: > vendor/bin/phan)
+
+comando: 
+            > composer require --dev phan/phan
+
+rodar o phan:
+            > vendor\bin\phan --allow-polyfill-parser src\Buscador.php
+            
+==========================================================================
+
+SOBRE EVETOS DE SCRIPT DO COMPOSER:
+
+    Conhecemos e entendemos um pouco dos eventos que o Composer nos fornece. Com eles, podemos executar scripts em momentos específicos como, por exemplo, ao instalar ou atualizar um pacote.
+
+Para a lista completa de quais os eventos disponíveis, acesse https://getcomposer.org/doc/articles/scripts.md
+
+==========================================================================
+
+PARA VERSIONAR NO GITHUB
+
+        > git tag -a v1.0.0
+
+    Tipos de versões:
+
+        - MAJOR version -> Quando modifico algo que pode quebrar o código. EXEMPLO: mudei a tipagem do retorno do método de "string" para "/outros que não sejam string". 
+        >Nessa é necessario mudar o numero principal: V1.0.0 -> V2.0.0 pois não são mais compatíveis
+        ~~~~~~~
+        - MINOR version -> Quando adiciono uma nova funcionalidade sem quebrar nada. 
+        EXEMPLO: Novo método que não quebre o restante do meu código já existente anteriormente.
+        >Nessa mudamos apenas o segundo número: V1.0.0 -> V1.1.0
+        ~~~~~~~
+        - PATCH version -> Correções de bug e mudanças menores, mudar apenas o último número.
+        Nessa situação ficaria assim: V1.0.0 -> V1.0.1
+
+
+==========================================================================
