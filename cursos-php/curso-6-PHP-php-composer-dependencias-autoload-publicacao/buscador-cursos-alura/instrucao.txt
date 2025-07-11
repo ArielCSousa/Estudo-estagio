@@ -114,5 +114,7 @@ PARA VERSIONAR NO GITHUB
         - PATCH version -> Correções de bug e mudanças menores, mudar apenas o último número.
         Nessa situação ficaria assim: V1.0.0 -> V1.0.1
 
+Link sobre versões:
+    > https://getcomposer.org/doc/articles/versions.md#exact-version-constraint
 
 ==========================================================================
