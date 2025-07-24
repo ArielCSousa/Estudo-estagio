@@ -1,0 +1,36 @@
+======================================================================================================================
+
+ESTE PROJETO É DESENVOLVIDO DURANTE AS AULAS DO CURSO A ALURA DO LINK ABAIXO:
+    >https://cursos.alura.com.br/course/php-web-conhecendo-padrao-mvc/task/120272
+
+======================================================================================================================
+
+    Variaveis superglobais: GET e POST
+
+        $_GET -> Nessa variável nós temos acesso a todos os parâmetros 
+        enviados através da URL no formato de query string.
+        
+        $_POST -> Nessa variável nós temos acesso a todos os dados 
+        enviados por um formulário em uma requisição com o método/verbo POST.
+
+
+    >>> Há também as seguintes superglobais:
+
+        $_FILES que contém um array dos arquivos enviados via upload em um formulário utilizando o verbo/método POST;
+
+        $_COOKIE que contém um array associativo com todos os cookies enviados na requisição;
+
+        $_SESSION que nos permite acessar e definir informações na sessão;
+
+        $_REQUEST que possui todos os valores de $_GET, $_POST e $_COOKIE;
+
+        $_ENV que contém todas as variáveis de ambiente passadas para o processo do PHP;
+
+        $_SERVER que possui informações do servidor Web, como os cabeçalhos da requisição, o caminho acessado, etc.
+        Todas as chaves desse array são criadas pelo servidor web, então elas podem variar de servidor para servidor.
+
+======================================================================================================================
+
+
+
+
