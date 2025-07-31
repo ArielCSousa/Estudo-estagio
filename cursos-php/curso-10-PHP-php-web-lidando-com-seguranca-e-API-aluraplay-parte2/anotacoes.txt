@@ -1,3 +1,21 @@
 Link do curso atual:
     > https://cursos.alura.com.br/course/php-web-lidando-seguranca-api/task/118405
 //===================================================================================
+
+O USUÁRIO CRIADO FOI:
+    EMAIL: "email@example.com" 
+    SENHA: "123456"
+//===================================================================================
+    
+    INICIAR SERVIDOR
+        > php -S localhost:8080 -t public
+//===================================================================================
+
+AULA IMPORTANTE SOBBRE SESSÃO
+    > https://cursos.alura.com.br/course/php-web-lidando-seguranca-api/task/118411
+
+//===================================================================================
+
+
+//===================================================================================
+
