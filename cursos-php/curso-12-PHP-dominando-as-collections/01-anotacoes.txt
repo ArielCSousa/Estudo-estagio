@@ -1,0 +1,12 @@
+link desse curso:
+    > https://cursos.alura.com.br/course/php-dominando-collections/task/91265
+
+    Uma fila é uma lista onde o primeiro a entrar é o primeiro a sair. Já na pilha o último a entrar é o primeiro a sair
+
+
+    INSTALAÇÃO DA DS - DLL PARA USAR O PECL
+
+    > https://cursos.alura.com.br/course/php-dominando-collections/task/91287
+
+    LINK PARA A VERSÃO WINDOWS
+    > https://pecl.php.net/package/ds

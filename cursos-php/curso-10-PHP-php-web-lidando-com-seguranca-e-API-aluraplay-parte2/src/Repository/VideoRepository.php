@@ -127,7 +127,7 @@ class VideoRepository
 
     public function removeImageFromVideo(int $id): bool
     {
-        $sql = "UPDATE videos SET image_path = NULL WHERE id = :id";
+        $sql = "UPDATE videos SET image_path = null WHERE id = :id";
         $statement = $this->pdo->prepare($sql);
         $statement->bindValue(':id', $id, \PDO::PARAM_INT);
 

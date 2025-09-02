@@ -15,7 +15,7 @@ class DeleteVideoImageController implements Controller
 
     public function processaRequisicao(): void
     {
-        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+        $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 
         if($id === false || $id === null){
             header('Location: /?sucesso=0');

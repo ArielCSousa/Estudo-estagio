@@ -8,7 +8,7 @@ require_once __DIR__ . '/inicio-html.php';
         <li class="videos__item">
             <?php if($video->getFilePath() !== null): ?>
                 <a href="<?= $video->url; ?>">
-                    <img src="/img/uploads/<?= $video->getFilePath(); ?>" alt="" style=”max-width: 100%”/>
+                    <img src="/img/uploads/<?= $video->getFilePath(); ?>" alt="" style="max-width: 100%"/>
                 </a>
             <?php else: ?>    
             <iframe width="100%" height="72%" src="<?= $video->url; ?>"
@@ -20,7 +20,12 @@ require_once __DIR__ . '/inicio-html.php';
                 <h3><?= $video->title; ?></h3>
                 <div class="acoes-video">
                     <a href="/editar-video?id=<?= $video->id; ?>">Editar</a>
-                    <a href="/excluir-imagem-video?id=<?= $video->id; ?>">Excluir imagem</a>
+                <?php if ($video->getFilePath() !== null): ?>
+                    <form action="/excluir-imagem-video" method="post" style="display: inline;">
+                        <input type="hidden" name="id" value="<?= $video->id; ?>">
+                        <button type="submit" style="all: unset; cursor: pointer; color: red;">Excluir imagem</button>
+                    </form>
+                <?php endif; ?>
                     <a href="/remover-video?id=<?= $video->id; ?>">Excluir</a>
                 </div>
             </div>

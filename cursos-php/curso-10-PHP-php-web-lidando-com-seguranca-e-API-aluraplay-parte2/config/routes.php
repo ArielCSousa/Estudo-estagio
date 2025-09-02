@@ -12,6 +12,7 @@ return [
     'GET|/login' => \Alura\Mvc\Controller\LoginFormController::class,
     'POST|/login' => \Alura\Mvc\Controller\LoginController::class,
     'GET|/logout' => \Alura\Mvc\Controller\LogoutController::class,
-    'GET|/excluir-imagem-videos' => \Alura\MVC\Controller\DeleteVideoImageController::class
-    
+    'POST|/excluir-imagem-video' => \Alura\Mvc\Controller\DeleteVideoImageController::class,
+    'GET|/videos-json' => \Alura\Mvc\Controller\JsonVideoListController::class,
+    'POST|/videos' => \Alura\Mvc\Controller\NewJsonVideoController::class,
 ];
